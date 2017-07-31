@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Categorias
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let categoria of categorias"
+    (click)="verForm(categoria.idCategoria)">
+    <ion-card-header>
+      <h1>
+        {{ categoria.nombreCategoria}}
+      </h1>
+    </ion-card-header>
+    <ion-list>
+    </ion-list>
+  </ion-card>
+
+  <ion-fab right bottom>
+    <button ion-fab color="primary"
+    (click)="verForm('nuevo')">
+      <ion-icon name="md-add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>
